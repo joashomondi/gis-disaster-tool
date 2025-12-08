@@ -1,0 +1,15 @@
+# Enable Passenger
+PassengerEnabled On
+PassengerPython /home/nistacke/virtualenv/gis-disaster-app/3.11/bin/python3
+
+# Set the application startup file
+PassengerAppRoot /home/nistacke/route.nist.ac.ke/gis-disaster-app
+
+# Optional: Set Passenger to production mode
+PassengerAppEnv production
+
+# Handle requests
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ passenger_wsgi.py [QSA,L]
+

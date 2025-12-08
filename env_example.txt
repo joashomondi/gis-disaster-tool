@@ -1,0 +1,27 @@
+# Environment Variables for cPanel Deployment
+# ============================================
+# Copy these to your cPanel Python App environment variables section
+# Do NOT commit actual API keys to version control
+
+# ArcGIS Route API Token
+# Get from: https://developers.arcgis.com/
+ARCGIS_TOKEN=your_arcgis_token_here
+
+# ArcGIS Closest Facilities API Token
+ARCGIS_FACILITIES_TOKEN=your_facilities_token_here
+
+# Open Routing Service Endpoint
+# Default: http://146.190.156.72:8080 (may go offline)
+# Set up your own ORS instance for production use
+ORS_ENDPOINT=http://146.190.156.72:8080/ors/v2/directions/driving-car/geojson
+
+# Flask Configuration
+FLASK_ENV=production
+FLASK_DEBUG=False
+SECRET_KEY=your_secret_key_here_change_this
+
+# Optional: Custom settings
+MAX_CONTENT_LENGTH=16777216  # 16MB max upload size
+
+
+
